@@ -1,35 +1,36 @@
 import React from 'react';
 import './Features.css';
+import { FaTrophy, FaBuilding, FaUsers, FaCalendarAlt, FaBolt, FaChalkboardTeacher } from 'react-icons/fa';
 
 const Features = () => {
   const features = [
     {
-      icon: '🎾',
+      icon: <FaTrophy />,
       title: 'Premium Courts',
       description: 'Professional-grade pickleball courts with perfect surface quality for optimal gameplay.'
     },
     {
-      icon: '🏢',
+      icon: <FaBuilding />,
       title: 'Terrace Facility',
       description: 'Unique open-air terrace setting providing a refreshing and exciting gaming environment.'
     },
     {
-      icon: '🎯',
+      icon: <FaUsers />,
       title: 'All Skill Levels',
       description: 'From beginners to advanced players, we cater to everyone with tailored experiences.'
     },
     {
-      icon: '👥',
+      icon: <FaCalendarAlt />,
       title: 'Community Events',
       description: 'Regular tournaments, leagues, and social events to connect with fellow players.'
     },
     {
-      icon: '⚡',
+      icon: <FaBolt />,
       title: 'Quick Booking',
       description: 'Easy online booking system to reserve your court in just a few clicks.'
     },
     {
-      icon: '🏆',
+      icon: <FaChalkboardTeacher />,
       title: 'Pro Coaching',
       description: 'Expert coaching sessions available to help you improve your game.'
     }

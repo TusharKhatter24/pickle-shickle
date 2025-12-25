@@ -1,60 +1,90 @@
-import React from 'react';
-import './Gallery.css';
+import React from "react";
+import "./Gallery.css";
+import image1 from "../images/image1.jpg";
+import image2 from "../images/image2.jpg";
+import image3 from "../images/image3.jpg";
+import image4 from "../images/image4.jpg";
 
 const Gallery = () => {
   const galleryItems = [
     {
-      title: 'Court View',
-      description: 'Professional pickleball court'
+      title: "Court View",
+      description: "Professional pickleball court",
+      image: image3,
     },
     {
-      title: 'Terrace Setting',
-      description: 'Open-air gaming experience'
+      title: "Terrace Setting",
+      description: "Open-air gaming experience",
+      image: image4,
     },
     {
-      title: 'Community',
-      description: 'Players enjoying the game'
+      title: "Community",
+      description: "Players enjoying the game",
+      image: image1,
     },
     {
-      title: 'Equipment',
-      description: 'Premium paddles and balls'
+      title: "Equipment",
+      description: "Premium paddles and balls",
+      image: image2,
     },
     {
-      title: 'Events',
-      description: 'Tournament action'
+      title: "Events",
+      description: "Tournament action",
+      image: image3,
     },
     {
-      title: 'Coaching',
-      description: 'Expert guidance'
-    }
+      title: "Noida Center",
+      description: "Our Location",
+      image: image4,
+    },
   ];
 
   return (
     <section id="gallery" className="gallery section">
       <div className="container">
-        <h2 className="section-title">Experience The Venue</h2>
-        <p className="section-subtitle">
-          Get a glimpse of our world-class facility
-        </p>
+        <div className="gallery-wrapper">
+          <div className="gallery-text-section">
+            <h2 className="gallery-title">Experience The Venue</h2>
+            <p className="gallery-description">
+              Get a glimpse of our world-class facility. Experience the thrill
+              of pickleball in a state-of-the-art facility. Whether you're a
+              beginner or a pro, we've got you covered!
+            </p>
+          </div>
 
-        <div className="gallery-grid">
-          {galleryItems.map((item, index) => (
-            <div className="gallery-item" key={index}>
-              <div className="gallery-placeholder">
-                <img src="/logo.png" alt={item.title} />
-                <div className="gallery-overlay">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
+          <div className="gallery-content-section">
+            <div className="gallery-rail">
+              <div className="gallery-rail-track">
+                {galleryItems.map((item, index) => (
+                  <div className="gallery-rail-item" key={index}>
+                    <div className="gallery-rail-image">
+                      <img src={item.image} alt={item.title} />
+                    </div>
+                    <div className="gallery-rail-content">
+                      <h3 className="gallery-rail-title">{item.title}</h3>
+                      <p className="gallery-rail-description">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+                {/* Duplicate items for seamless loop */}
+                {galleryItems.map((item, index) => (
+                  <div className="gallery-rail-item" key={`duplicate-${index}`}>
+                    <div className="gallery-rail-image">
+                      <img src={item.image} alt={item.title} />
+                    </div>
+                    <div className="gallery-rail-content">
+                      <h3 className="gallery-rail-title">{item.title}</h3>
+                      <p className="gallery-rail-description">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="gallery-cta">
-          <h3>Ready to Experience It Yourself?</h3>
-          <p>Visit us at our Sector 68 location and see why we're Noida's premier pickleball destination</p>
-          <a href="#contact" className="btn btn-primary">Visit Us Today</a>
+          </div>
         </div>
       </div>
     </section>
@@ -62,4 +92,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-

@@ -7,7 +7,6 @@ const Navbar = ({ scrolled }) => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
-    { name: 'Features', href: '#features' },
     { name: 'Gallery', href: '#gallery' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -33,7 +32,7 @@ const Navbar = ({ scrolled }) => {
           ))}
         </div>
 
-        <a href="#contact" className="navbar-cta">
+        <a href="https://hudle.in" target="_blank" rel="noopener noreferrer" className="navbar-cta">
           Book Now
         </a>
 

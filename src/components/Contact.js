@@ -5,13 +5,15 @@ const Contact = () => {
   return (
     <section id="contact" className="contact section">
       <div className="container">
-        <h2 className="section-title">Visit Us</h2>
-        <p className="section-subtitle">
-          Come experience the best pickleball facility in Noida
-        </p>
+        <div className="contact-wrapper">
+          <div className="contact-text-section">
+            <h2 className="contact-title">Visit Us</h2>
+            <p className="contact-description">
+              Come experience the best pickleball facility in Noida. Located in the vibrant Sector 68, our state-of-the-art terrace facility offers a unique open-air gaming experience.
+            </p>
+          </div>
 
-        <div className="contact-content">
-          <div className="contact-info">
+          <div className="contact-content">
             <div className="info-card">
               <div className="info-icon">📍</div>
               <h3>Location</h3>
@@ -42,67 +44,6 @@ const Contact = () => {
               <p>Monday - Friday: 6 AM - 11 PM</p>
               <p>Saturday - Sunday: 6 AM - 12 AM</p>
             </div>
-          </div>
-
-          <div className="contact-form-section">
-            <div className="form-header">
-              <h3>Book Your Court</h3>
-              <p>Send us a message and we'll get back to you shortly</p>
-            </div>
-            <form className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input 
-                  type="text" 
-                  id="name" 
-                  name="name" 
-                  placeholder="Your Name"
-                  required 
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input 
-                  type="email" 
-                  id="email" 
-                  name="email" 
-                  placeholder="your@email.com"
-                  required 
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone">Phone</label>
-                <input 
-                  type="tel" 
-                  id="phone" 
-                  name="phone" 
-                  placeholder="+91 XXXXX XXXXX"
-                  required 
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="date">Preferred Date</label>
-                <input 
-                  type="date" 
-                  id="date" 
-                  name="date" 
-                  required 
-                />
-              </div>
-              <div className="form-group full-width">
-                <label htmlFor="message">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  rows="4"
-                  placeholder="Tell us about your booking requirements..."
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
 
